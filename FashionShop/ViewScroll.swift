@@ -14,56 +14,75 @@ class ViewScroll: UIViewController, UIScrollViewDelegate{
     
     @IBOutlet weak var sld_Zoom: UISlider!
     
+    @IBOutlet weak var pageController: UIPageControl!
+    
     var photo = UIImageView()
+    
+    var pageImages: [String] = []
+    
+    var first = false
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        let imgView = UIImageView(image: UIImage(named: "girl.jpg"))
-        imgView.frame = CGRectMake(0, 0, imgView.frame.size.width, imgView.frame.size.height)
-        imgView.userInteractionEnabled = true
-        imgView.multipleTouchEnabled = true
-        imgView.contentMode = .ScaleAspectFit
+        pageImages = ["girl", "girl2","girl3", "girl4"]
         
+        pageController.currentPage = 0
         
-        photo = imgView
+        pageController.numberOfPages = pageImages.count
         
-        scrollView.contentSize = CGSizeMake(imgView.bounds.width, imgView.bounds.height)
-        
-        
+
         scrollView.minimumZoomScale = 0.5
         
         scrollView.maximumZoomScale = 2
         
-        scrollView.zoomScale = 0.5
         
-        sld_Zoom.minimumValue = 0.5
+     
         
-        sld_Zoom.maximumValue = 2
         
-        sld_Zoom.value = Float(scrollView.zoomScale)
-        
-        let tap = UITapGestureRecognizer(target: self, action: Selector("tapImg:"))
-        
-        tap.numberOfTapsRequired = 1
-        
-        let doubleTap = UITapGestureRecognizer(target: self, action: Selector("doubleTapImg:"))
-        
-        doubleTap.numberOfTapsRequired = 2
-        
-        imgView.addGestureRecognizer(tap)
-        
-        imgView.addGestureRecognizer(doubleTap)
-        
-        tap.requireGestureRecognizerToFail(doubleTap)
-        
-        self.scrollView.addSubview(imgView)
-
-        // Do any additional setup after loading the view.
-        
-        scrollView.backgroundColor = UIColor.brownColor()
     }
+    
+    
+    
+    
+    override func viewDidLayoutSubviews() {
+        if(!first){
+            first = true
+            
+            let pagesScrollViewSize = scrollView.frame.size
+            
+            scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), 0)
+            
+            scrollView.pagingEnabled = true
+            
+            for(var i = 0; i < pageImages.count; i++){
+                
+                let imgView = UIImageView(image: UIImage(named: pageImages[i] + ".jpg"))
+                
+                imgView.frame = CGRectMake(CGFloat(i) * scrollView.frame.size.width, 0, scrollView.frame.size.width, scrollView.frame.size.height)
+                
+                imgView.contentMode = .ScaleAspectFit
+                
+                scrollView.backgroundColor = UIColor.blackColor()
+                
+                self.scrollView.addSubview(imgView)
+             
+                
+                if(i == 0){
+                    photo = imgView
+                }
+            }
+        
+        
+        
+        }
+        
+        
+    }
+    
+
+    
 
     func tapImg(gesture: UITapGestureRecognizer){
         
@@ -126,5 +145,25 @@ class ViewScroll: UIViewController, UIScrollViewDelegate{
     
     }
     
+    @IBAction func onChange(sender: AnyObject) {
+        scrollView.contentOffset = CGPointMake(scrollView.frame.size.width * CGFloat(pageController.currentPage), 0)
+        
+    }
+    
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let width = scrollView.frame.size.width
+        let page =  scrollView.contentOffset.x / width
+        
+        pageController.currentPage = Int(page)
+    }
+    
+//    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+//        let width = scrollView.frame.size.width
+//        let page =  scrollView.contentOffset.x / width
+//        
+//        pageController.currentPage = Int(page)
+//    }
+//    
     
 }

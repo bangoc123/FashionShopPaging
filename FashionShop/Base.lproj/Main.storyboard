@@ -24,47 +24,30 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="kpB-Ku-rqK"/>
                                 </connections>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ded-vu-hBT">
-                                <rect key="frame" x="20" y="539" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42z-wv-9rV">
-                                <rect key="frame" x="517" y="539" width="62.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zgm-jO-OHK">
-                                <rect key="frame" x="118" y="535" width="372" height="31"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YMe-8X-rDF">
+                                <rect key="frame" x="20" y="501" width="560" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="sld_zoom:" destination="BYZ-38-t0r" eventType="valueChanged" id="h0H-hH-Nmt"/>
+                                    <action selector="onChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="7Pr-kG-Ng1"/>
                                 </connections>
-                            </slider>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6sG-fe-7pb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5fU-G5-jR2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zgm-jO-OHK" secondAttribute="bottom" constant="35" id="98w-nS-LIT"/>
-                            <constraint firstItem="Zgm-jO-OHK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="CYm-gP-W8X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YMe-8X-rDF" secondAttribute="bottom" constant="62" id="DZl-UJ-b1M"/>
+                            <constraint firstItem="YMe-8X-rDF" firstAttribute="top" secondItem="6sG-fe-7pb" secondAttribute="bottom" constant="2" id="EPV-rI-oJq"/>
                             <constraint firstItem="6sG-fe-7pb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LCP-TM-OVa"/>
-                            <constraint firstItem="Ded-vu-hBT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M17-hb-VWB"/>
-                            <constraint firstItem="42z-wv-9rV" firstAttribute="top" secondItem="6sG-fe-7pb" secondAttribute="bottom" constant="40" id="T7s-c1-zTv"/>
-                            <constraint firstItem="42z-wv-9rV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Z9O-qw-cSp"/>
-                            <constraint firstItem="42z-wv-9rV" firstAttribute="leading" secondItem="Zgm-jO-OHK" secondAttribute="trailing" constant="30" id="a71-4k-hAB"/>
-                            <constraint firstItem="Zgm-jO-OHK" firstAttribute="top" secondItem="6sG-fe-7pb" secondAttribute="bottom" constant="36" id="hO0-Vu-cDX"/>
+                            <constraint firstItem="YMe-8X-rDF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LXf-LE-Lc8"/>
                             <constraint firstItem="6sG-fe-7pb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ktO-sf-cmb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ded-vu-hBT" secondAttribute="bottom" constant="40" id="qxV-Ee-9Xk"/>
-                            <constraint firstItem="Ded-vu-hBT" firstAttribute="top" secondItem="6sG-fe-7pb" secondAttribute="bottom" constant="40" id="rF9-O3-LIv"/>
                             <constraint firstItem="6sG-fe-7pb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="sGq-gT-w3d"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="42z-wv-9rV" secondAttribute="bottom" constant="40" id="ucy-ql-pHR"/>
                             <constraint firstItem="6sG-fe-7pb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x9a-r5-p8o"/>
+                            <constraint firstItem="YMe-8X-rDF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="z7s-zf-8Jv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pageController" destination="YMe-8X-rDF" id="iDd-D5-Kk6"/>
                         <outlet property="scrollView" destination="6sG-fe-7pb" id="tLE-T7-VyG"/>
-                        <outlet property="sld_Zoom" destination="Zgm-jO-OHK" id="gZ4-Qd-EZ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

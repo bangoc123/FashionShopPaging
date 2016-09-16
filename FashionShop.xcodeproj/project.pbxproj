@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F448CFF81D8BE50000BB5BCB /* girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F448CFF41D8BE50000BB5BCB /* girl.jpg */; };
+		F448CFF91D8BE50000BB5BCB /* girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F448CFF51D8BE50000BB5BCB /* girl2.jpg */; };
+		F448CFFA1D8BE50000BB5BCB /* girl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F448CFF61D8BE50000BB5BCB /* girl3.jpg */; };
+		F448CFFB1D8BE50000BB5BCB /* girl4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F448CFF71D8BE50000BB5BCB /* girl4.jpg */; };
 		F4703BA21D8941CF00676A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4703BA11D8941CF00676A6D /* AppDelegate.swift */; };
 		F4703BA41D8941CF00676A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4703BA31D8941CF00676A6D /* ViewController.swift */; };
 		F4703BA71D8941CF00676A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4703BA51D8941CF00676A6D /* Main.storyboard */; };
 		F4703BA91D8941CF00676A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4703BA81D8941CF00676A6D /* Assets.xcassets */; };
 		F4703BAC1D8941CF00676A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4703BAA1D8941CF00676A6D /* LaunchScreen.storyboard */; };
 		F4703BB81D89433800676A6D /* ViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4703BB71D89433800676A6D /* ViewScroll.swift */; };
-		F4703BBA1D89446900676A6D /* girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4703BB91D89446900676A6D /* girl.jpg */; };
-		F4703BBC1D89460500676A6D /* girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4703BBB1D89460500676A6D /* girl2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F448CFF41D8BE50000BB5BCB /* girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl.jpg; sourceTree = "<group>"; };
+		F448CFF51D8BE50000BB5BCB /* girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpg; sourceTree = "<group>"; };
+		F448CFF61D8BE50000BB5BCB /* girl3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl3.jpg; sourceTree = "<group>"; };
+		F448CFF71D8BE50000BB5BCB /* girl4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl4.jpg; sourceTree = "<group>"; };
 		F4703B9E1D8941CF00676A6D /* FashionShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4703BA11D8941CF00676A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4703BA31D8941CF00676A6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,8 +32,6 @@
 		F4703BAB1D8941CF00676A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4703BAD1D8941CF00676A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4703BB71D89433800676A6D /* ViewScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewScroll.swift; sourceTree = "<group>"; };
-		F4703BB91D89446900676A6D /* girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl.jpg; sourceTree = "<group>"; };
-		F4703BBB1D89460500676A6D /* girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +64,10 @@
 		F4703BA01D8941CF00676A6D /* FashionShop */ = {
 			isa = PBXGroup;
 			children = (
-				F4703BB91D89446900676A6D /* girl.jpg */,
-				F4703BBB1D89460500676A6D /* girl2.jpg */,
+				F448CFF41D8BE50000BB5BCB /* girl.jpg */,
+				F448CFF51D8BE50000BB5BCB /* girl2.jpg */,
+				F448CFF61D8BE50000BB5BCB /* girl3.jpg */,
+				F448CFF71D8BE50000BB5BCB /* girl4.jpg */,
 				F4703BA11D8941CF00676A6D /* AppDelegate.swift */,
 				F4703BA31D8941CF00676A6D /* ViewController.swift */,
 				F4703BA51D8941CF00676A6D /* Main.storyboard */,
@@ -132,9 +138,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4703BAC1D8941CF00676A6D /* LaunchScreen.storyboard in Resources */,
-				F4703BBA1D89446900676A6D /* girl.jpg in Resources */,
+				F448CFFA1D8BE50000BB5BCB /* girl3.jpg in Resources */,
+				F448CFFB1D8BE50000BB5BCB /* girl4.jpg in Resources */,
+				F448CFF81D8BE50000BB5BCB /* girl.jpg in Resources */,
 				F4703BA91D8941CF00676A6D /* Assets.xcassets in Resources */,
-				F4703BBC1D89460500676A6D /* girl2.jpg in Resources */,
+				F448CFF91D8BE50000BB5BCB /* girl2.jpg in Resources */,
 				F4703BA71D8941CF00676A6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
